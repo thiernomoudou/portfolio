@@ -1,4 +1,4 @@
-# `create-react-app` with a server example
+# Personal web app based on react.
 
 <!-- [![TravisCI](https://travis-ci.org/fullstackreact/food-lookup-demo.svg?branch=master)](https://travis-ci.org/fullstackreact/food-lookup-demo)
 [![Dolphins](https://cdn.rawgit.com/fullstackreact/food-lookup-demo/master/dolphins-badge.svg)](https://www.fullstackreact.com) -->
