@@ -16,7 +16,7 @@ function Navbar(props){
     };
     return(
         <div className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand app-logo" href="#">
                 <img src={[persLogo]} style={styles.logo} alt="" />
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" 
