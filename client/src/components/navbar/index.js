@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import persLogo from './../../images/pers_logo.svg';
 
@@ -16,9 +16,9 @@ function Navbar(props){
     };
     return(
         <div className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand app-logo" href="#">
+            <Link className="navbar-brand app-logo" to="/">
                 <img src={[persLogo]} style={styles.logo} alt="" />
-            </a>
+            </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" 
             aria-label="Toggle navigation">
@@ -26,10 +26,10 @@ function Navbar(props){
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div className="navbar-nav" id='navbar-right' >
-                    <a className="nav-item nav-link active" href="#">Home<span className="sr-only">(current)</span></a>
-                    <a className="nav-item nav-link" href="#">Projects</a>
-                    <a className="nav-item nav-link"  href="#">Blog</a>
-                    <a className="nav-item nav-link" href="#">Contact</a>
+                    <Link className="nav-item nav-link active" to="/">Home<span className="sr-only">(current)</span></Link>
+                    <Link className="nav-item nav-link" to="/">Projects</Link>
+                    <Link className="nav-item nav-link"  to="/">Blog</Link>
+                    <Link className="nav-item nav-link" to="/">Contact</Link>
                 </div>
             </div>
         </div>
