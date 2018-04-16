@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import welcomeMessage from './../../images/welcome-message.svg';
 
@@ -11,7 +11,7 @@ export default function Greeting (props){
     };
     return (
         <div className="welcome-message">
-            <img src={welcomeMessage} style={styles.message} className="img-fluid" alt="Greeting image"/>
+            <img src={welcomeMessage} style={styles.message} className="img-fluid" alt="Greeting"/>
             <h5> A Python and Javascript developer. </h5>
         </div>
     );
