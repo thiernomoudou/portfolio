@@ -15,7 +15,7 @@ function Navbar(props){
         }
     };
     return(
-        <div className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand app-logo" to="/">
                 <img src={[persLogo]} style={styles.logo} alt="" />
             </Link>
