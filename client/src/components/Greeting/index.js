@@ -1,6 +1,6 @@
 import React from 'react';
 
-import welcomeMessage from './../../images/welcome-message.svg';
+import welcomeMessage from './../../images/hello.svg';
 
 export default function Greeting (props){
     
