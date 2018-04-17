@@ -29,6 +29,7 @@ body{
 from { transform: rotate(0deg); }
 to { transform: rotate(360deg); }
 }
+
 /* ************************************* */
 /* NAVBAR  */
 /* **************************************  */
@@ -39,6 +40,7 @@ to { transform: rotate(360deg); }
 /* **************************************  */
 .welcome-message{
     background-color: #eee;
+    margin-bottom: 0;
 }
 
 .welcome-message img{
@@ -52,9 +54,24 @@ to { transform: rotate(360deg); }
     text-align: center;
     margin-top: -7%;
     color: #B30FB7;
+    margin-bottom: 0;
 }
 /* ************************************* */
 /* WELCOME MESSAGE */
 /* **************************************  */
 
 
+/* ************************************* */
+/* BANNER */
+/* **************************************  */
+
+.banner {
+    background-color: #eee;
+    margin-top: 0;
+}
+#boot-override .row{
+    margin-bottom: -12%;
+}
+/* ************************************* */
+/* BANNER */
+/* **************************************  */
