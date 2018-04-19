@@ -1,5 +1,4 @@
 
-
 body{
     font-family: 'Comfortaa', cursive;
 }
@@ -71,7 +70,46 @@ to { transform: rotate(360deg); }
 }
 #boot-override .banner{
     height: 31rem;
+    margin-bottom: 4%;
 }
 /* ************************************* */
 /* BANNER */
+/* **************************************  */
+
+
+/* ************************************* */
+/* Presentation */
+/* **************************************  */
+
+.bio{
+    margin-bottom: 5%;
+}
+.bio h2, .tech-tools h2{
+    color: #B30FB7;
+    font-size: 250%;
+}
+
+.user-icon, .briefcase-icon{
+    margin-bottom: 2%;
+}
+
+.bio p:first-of-type{
+    margin-bottom: 0.5rem;
+}
+
+.bio p, .tech-tools p{
+   font-size: 130%;
+}
+
+.tech-tools{
+    background-color: #eee;
+    padding-top: 3%;
+}
+
+.tech-tools .row{
+    margin-top: 3%;
+}
+
+/* ************************************* */
+/* Presentation */
 /* **************************************  */

@@ -5,16 +5,16 @@ import Presentation from './index';
 
 describe('Presentation', () => {
     let presentation;
-    it('have 2 h3', () => {
+    it('have 2 h2', () => {
         presentation = shallow(<Presentation />);
-        expect(presentation.find('h3').length).toBe(2)
+        expect(presentation.find('h2').length).toBe(2)
     });
-    it('have a h3 that rendere "Who am I ?"', () => {
+    it('have a h2 that rendere "Who I am"', () => {
         presentation = shallow(<Presentation />);
-        expect(presentation.find('h3').at(0).text()).toBe('Who am I ?');
+        expect(presentation.find('h2').at(0).text()).toBe('Who I am');
     });
-    it('have a h3 that rendere "Whith what"', () => {
+    it('have a h2 that rendere "hat"', () => {
         presentation = shallow(<Presentation />);
-        expect(presentation.find('h3').at(1).text()).toBe('Whith what ?');
+        expect(presentation.find('h2').at(1).text()).toBe('What');
     });
 });

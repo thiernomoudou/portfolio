@@ -1,6 +1,7 @@
 
-import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
-import faCheckSquare from '@fortawesome/fontawesome-free-solid/faCheckSquare';
-import brands from '@fortawesome/fontawesome-free-brands'
+import faUser from '@fortawesome/fontawesome-free-solid/faUser';
+import brands from '@fortawesome/fontawesome-free-brands';
+import faBriefCase from '@fortawesome/fontawesome-free-solid/faBriefcase';
+import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase';
 
-export {brands, faCheckSquare, faCoffee};
+export {brands, faUser, faBriefCase, faDatabase};
