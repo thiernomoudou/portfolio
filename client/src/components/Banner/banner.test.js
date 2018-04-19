@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import {Link} from 'react-router-dom';
 
-import Banner from './../index';
-import banner from './../../../images/banner-v2.svg';
+import Banner from './index';
+import banner from './../../images/banner-v2.svg';
 
 describe('Banner', () => {
     let wrapper;

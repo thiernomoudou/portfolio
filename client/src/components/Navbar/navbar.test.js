@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import {Link} from 'react-router-dom';
 
-import Navbar from './../index';
+import Navbar from './index';
 
 describe('Navbar', () => {
     let wrapper;
