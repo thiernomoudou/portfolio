@@ -5,6 +5,7 @@ import Greeting from './../../components/Greeting/index';
 import Banner from './../../components/Banner/index';
 import Presentation from './../../components/Presentation/index';
 import CallToAction from './../../components/CallToAction/index';
+import Footer from './../../components/Footer/index';
 
 
 export default class HomePage extends Component{
@@ -16,6 +17,7 @@ export default class HomePage extends Component{
                 <Banner />
                 <Presentation />
                 <CallToAction />
+                <Footer />
             </div>
         );
     }
