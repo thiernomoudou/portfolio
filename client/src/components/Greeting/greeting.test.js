@@ -1,6 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import {Link} from 'react-router-dom';
+import { shallow } from 'enzyme';
 
 import Greeting from './index';
 import hello from './../../images/hello.svg';

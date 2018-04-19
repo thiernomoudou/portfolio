@@ -69,8 +69,8 @@ to { transform: rotate(360deg); }
     background-color: #eee;
     margin-top: 0;
 }
-#boot-override .row{
-    margin-bottom: -12%;
+#boot-override .banner{
+    height: 31rem;
 }
 /* ************************************* */
 /* BANNER */
