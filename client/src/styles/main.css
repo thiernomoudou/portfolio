@@ -76,6 +76,34 @@ to { transform: rotate(360deg); }
 /* BANNER */
 /* **************************************  */
 
+/* ************************************* */
+/* COMMONS PRESENTATION AND CALL TO ACTION  */
+/* **************************************  */
+
+.bio h2, .tech-tools h2,
+.call-to-action h2{
+    color: #B30FB7;
+    font-size: 250%;
+}
+
+.bio p, .tech-tools p,
+.call-to-action p{
+    font-size: 130%;
+ }
+
+ .bio p:first-of-type,
+ .call-to-action p:first-of-type{
+    margin-bottom: 0.5rem;
+}
+
+.user-icon, .briefcase-icon,
+.tasks-icon{
+    margin-bottom: 2%;
+}
+
+ /* ************************************* */
+/* COMMONS PRESENTATION AND CALL TO ACTION  */
+/* **************************************  */
 
 /* ************************************* */
 /* Presentation */
@@ -83,22 +111,6 @@ to { transform: rotate(360deg); }
 
 .bio{
     margin-bottom: 5%;
-}
-.bio h2, .tech-tools h2{
-    color: #B30FB7;
-    font-size: 250%;
-}
-
-.user-icon, .briefcase-icon{
-    margin-bottom: 2%;
-}
-
-.bio p:first-of-type{
-    margin-bottom: 0.5rem;
-}
-
-.bio p, .tech-tools p{
-   font-size: 130%;
 }
 
 .tech-tools{
@@ -110,6 +122,43 @@ to { transform: rotate(360deg); }
     margin-top: 3%;
 }
 
+.presentation{
+    margin-bottom: 3%;
+}
 /* ************************************* */
 /* Presentation */
+/* **************************************  */
+
+/* ************************************* */
+/* CALL TO ACTION */
+/* **************************************  */
+
+.call-to-action .call-to-action-text{
+    color: #B30FB7;
+    font-size: 120%;
+    font-weight: 600;
+}
+
+.call-to-action .call-to-action-text:hover{
+    text-decoration: None;
+    color: #9DC040;
+}
+
+#boot-override .email-button{
+    background-color: #B30FB7;
+    color: white;
+    width: 20rem;
+    margin-top: 2%;
+}
+
+#boot-override .email-button:hover{
+    background-color: #9DC040 ;
+    color: white;
+}
+
+.call-to-action{
+    margin-bottom: 3%;
+}
+/* ************************************* */
+/* CALL TO ACTION */
 /* **************************************  */
