@@ -34,6 +34,12 @@ const Contact = () => {
                     <img src={mountain} style={styles.rightMount} className="img-fluid" alt="green-mountain"/>
                 </div>
             </div>
+            <p>
+                Do you have a project you want to start, or one that need additionnal help,
+                send me a note. 
+            </p>
+            <p>I'm open to discuss and ready to get involved.</p>
+
         </div>
     );
 
