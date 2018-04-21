@@ -165,14 +165,19 @@ to { transform: rotate(360deg); }
     color: #9DC040;
 }
 
-#boot-override .email-button{
+/* call-to-action button and form submit button styles */
+#boot-override .email-button, 
+#boot-override .contact-btn{
     background-color: #B30FB7;
     color: white;
     width: 20rem;
     margin-top: 2%;
 }
 
-#boot-override .email-button:hover{
+/* call-to-action button and form submit button styles */
+#boot-override .email-button, 
+#boot-override .email-button:hover,
+#boot-override .contact-btn:hover{
     background-color: #9DC040 ;
     color: white;
 }
@@ -229,6 +234,24 @@ to { transform: rotate(360deg); }
     font-size: 120%;
     margin-top: -1%;
 }
+
+#boot-override .contact-form .form-control:focus{
+    border-color: #B30FB7;;
+}
+
+.contact-form{
+    background-color: #eee;
+    padding: 2% 0 ;
+}
+
+.contact-form form{
+    margin: 2% 10%;
+}
+
+.contact-form .contact-btn{
+    margin-left: 18em;
+}
+
 /* ************************************* */
 /* CONTACT PAGE */
 /* **************************************  */

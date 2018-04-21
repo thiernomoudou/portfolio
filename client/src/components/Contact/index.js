@@ -2,6 +2,7 @@ import React from 'react';
 
 import contactTitle from './../../images/contact-title.svg';
 import mountain from './../../images/mountain-v2.svg';
+import ContactForm from './contact-form';
 
 const Contact = () => {
 
@@ -39,6 +40,7 @@ const Contact = () => {
                 send me a note. 
             </p>
             <p>I'm open to discuss and ready to get involved.</p>
+            <ContactForm />
 
         </div>
     );
