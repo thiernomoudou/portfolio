@@ -6,10 +6,10 @@ import './index.css';
 import './styles/main.css';
 import {brands, faUser, faBriefCase, faDatabase, faTasks} from './icons';
 
-import App from './views/App/index';
+import Root from './views/Root';
 import registerServiceWorker from './registerServiceWorker';
 
 fontawesome.library.add(brands, faUser, faBriefCase, faDatabase, faTasks);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 registerServiceWorker();

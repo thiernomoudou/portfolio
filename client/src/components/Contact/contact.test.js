@@ -13,7 +13,7 @@ describe('Contact', () => {
 
     it('renders a Contact message image', () => {
         wrapper = shallow(<Contact />);
-        expect(wrapper.find('img').prop('src')).toEqual(contactTitle);
+        expect(wrapper.find('img').at(1).prop('src')).toEqual(contactTitle);
     });
     
 });

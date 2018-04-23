@@ -175,7 +175,6 @@ to { transform: rotate(360deg); }
 }
 
 /* call-to-action button and form submit button styles */
-#boot-override .email-button, 
 #boot-override .email-button:hover,
 #boot-override .contact-btn:hover{
     background-color: #9DC040 ;
