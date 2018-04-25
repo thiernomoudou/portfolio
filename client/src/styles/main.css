@@ -224,13 +224,16 @@ to { transform: rotate(360deg); }
 /* CONTACT PAGE */
 /* **************************************  */
 
-#boot-override .contact-title .row{
-    margin-bottom: -3%;
+#contact-banner{
+    height: 12em;
 }
 
 .contact-title p{
     text-align: center;
     font-size: 120%;
+}
+
+.contact-title p:nth-of-type(2){
     margin-top: -1%;
 }
 
