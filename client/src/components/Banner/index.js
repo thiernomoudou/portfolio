@@ -12,7 +12,7 @@ const Banner = () => {
         },
 
         leftMount:{
-            height: '40em',
+            height: '30em',
             width: '120%'
         },
         rightMount:{
