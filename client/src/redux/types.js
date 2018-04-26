@@ -1,3 +1,3 @@
-export const FILL_FORM = 'FETCH_NEW_TIME';
 
-export const SUBMIT_FORM = 'USER_LOGIN';
+export const SUBMIT_FORM = 'SUBMIT_FORM';
+export const UPDATE_VALUE = 'UPDATE_VALUE';
