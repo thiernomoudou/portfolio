@@ -1,43 +1,80 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { formSubmit, formChange } from './../../redux/actionCreators';
+class ContactForm extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            text: '',
+            verification: ''
+        };
+    }
 
+    handleNameChange = (e) =>{
+        this.setState({
+            name: e.target.value
+        });
+    }
 
-const ContactForm = (props) =>{
-    return(
+    handleFormSubmit = () =>{
+        if (this.state.verification !== '2'){
+            alert (`${this.state.verification} is not equal to 2`);
+        }else{
+            alert (` cool `);
+        }
+    }
+
+    handleEmailChange = (e) =>{
+        this.setState({
+            email: e.target.value
+        });
+    }
+
+    handleTextChange = (e) =>{
+        this.setState({
+            text: e.target.value
+        });
+    }
+
+    handleVerificationChange = (e) =>{
+        this.setState({
+            verification: e.target.value
+        });
+    }
+
+    render(){
+        return(
         <div className="contact-form">
-            <form onSubmit={props.handleSumbitForm}>
+            <form onSubmit={this.handleFormSubmit}>
             <div className="form-row">
                 <div className="form-group col-md-6">
-                    <input name='name' type="text" className="form-control" 
-                    placeholder = {props.name} required={true} onChange={handleChange} />
+                    <input type="text" className="form-control" 
+                    placeholder = {this.props.name} required={true} onChange={this.handleNameChange} />
                 </div>
                 <div className="form-group col-md-6 ">
-                    <input name='email' type="email" className="form-control" 
-                    placeholder = {props.email} required={true} onChange={handleChange}/>
+                    <input type="email" className="form-control" 
+                    placeholder = {this.props.email} required={true} onChange={this.handleEmailChange}/>
                 </div>
             </div>
             <div className="form-group">
-                <textarea name='text' className="form-control" id="textArea3" rows="5" 
-                placeholder={props.text} onChange={handleChange} >
+                <textarea className="form-control" id="textArea3" rows="5" 
+                placeholder={this.props.text} onChange={this.handleTextChange} >
                 </textarea>
             </div>
-            <input name='verification' type="text" className="form-control" id="textInput4" 
-            placeholder= {props.verification} required={true} onChange={handleChange} />
+            <input type="text" className="form-control" id="textInput4" 
+            placeholder= {this.props.verification} required={true} onChange={this.handleVerificationChange} />
             {/* <input type="text" className="form-control" id="textInput4" 
             placeholder=" 1 + 1 = ?   Enter the result here"/> */}
             <button type="submit" className="btn btn-lg contact-btn">Send</button>
             </form>
         </div>
     );
+}
 };
 
-const handleChange = e => {
-    if (e.target.name === 'name'){
-        name: e.target.value
-    }
-};
+
 
 const mapStateToProps = state => {
     return {
@@ -48,19 +85,8 @@ const mapStateToProps = state => {
     }
   };
 
-const mapDispatchToProps = dispatch => ({
-handleSumbitForm: (e) => {
-    if (e.target.value === '2'){
-        dispatch(formSubmit())
-    }else{
-        alert (`${e.target.value} is not equal to 2`)
-    }
-    
-}
-});
 
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    mapStateToProps
   )(ContactForm);
