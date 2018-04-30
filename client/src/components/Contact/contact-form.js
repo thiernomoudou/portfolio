@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import fetch from 'cross-fetch';
 
 
 class ContactForm extends React.Component {
@@ -20,8 +21,28 @@ class ContactForm extends React.Component {
             this.setState({visible: ''});
         }else{
             this.setState({visible: 'hide'});
-            alert (` cool `);
+            console.log(this.state.name);
+            this.postData('http://localhost:3001/sending_email', 
+                {
+                    name: this.state.name,
+                    email: this.state.email,
+                    text: this.state.text
+                })
+                .then(data => console.log(data)) // JSON from `response.json()` call
+                .catch(error => console.error(error))
+            
         }
+    }
+ 
+    postData(url, data) {
+        return fetch(url, {
+          body: JSON.stringify(data), // must match 'Content-Type' header
+          headers: {
+            'content-type': 'application/json'
+          },
+          method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        })
+        .then(response => response.json()) // parses response to JSON
     }
 
     handleNameChange = (e) =>{

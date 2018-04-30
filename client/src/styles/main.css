@@ -251,7 +251,7 @@ to { transform: rotate(360deg); }
 }
 
 .contact-form .contact-btn{
-    margin-left: 18em;
+    margin: 0 auto;
 }
 
 .hide {
