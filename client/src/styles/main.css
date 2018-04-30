@@ -238,7 +238,7 @@ to { transform: rotate(360deg); }
 }
 
 #boot-override .contact-form .form-control:focus{
-    border-color: #B30FB7;;
+    border-color: #B30FB7;
 }
 
 .contact-form{
@@ -252,6 +252,19 @@ to { transform: rotate(360deg); }
 
 .contact-form .contact-btn{
     margin-left: 18em;
+}
+
+.hide {
+    display: none;
+}
+
+.verification-error{
+    border: 0.15rem solid red;
+    border-radius: 1%;
+    height: 2rem;
+    color: red;
+    padding: 0.2% 1% 1% 1%;
+
 }
 
 /* ************************************* */

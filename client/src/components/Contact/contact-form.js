@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
 class ContactForm extends React.Component {
     constructor(props){
         super(props);
@@ -8,22 +9,25 @@ class ContactForm extends React.Component {
             name: '',
             email: '',
             text: '',
-            verification: ''
+            verification: '',
+            visible: 'hide'
         };
+    }
+
+    handleFormSubmit = (e) =>{
+        e.preventDefault();
+        if (this.state.verification !== '2'){
+            this.setState({visible: ''});
+        }else{
+            this.setState({visible: 'hide'});
+            alert (` cool `);
+        }
     }
 
     handleNameChange = (e) =>{
         this.setState({
             name: e.target.value
         });
-    }
-
-    handleFormSubmit = () =>{
-        if (this.state.verification !== '2'){
-            alert (`${this.state.verification} is not equal to 2`);
-        }else{
-            alert (` cool `);
-        }
     }
 
     handleEmailChange = (e) =>{
@@ -65,6 +69,7 @@ class ContactForm extends React.Component {
             </div>
             <input type="text" className="form-control" id="textInput4" 
             placeholder= {this.props.verification} required={true} onChange={this.handleVerificationChange} />
+            <div className={"verification-error " + this.state.visible}> {this.state.verification} is not equal to the sum of 1 + 1, please enter a correct number`</div>
             {/* <input type="text" className="form-control" id="textInput4" 
             placeholder=" 1 + 1 = ?   Enter the result here"/> */}
             <button type="submit" className="btn btn-lg contact-btn">Send</button>
@@ -75,7 +80,6 @@ class ContactForm extends React.Component {
 };
 
 
-
 const mapStateToProps = state => {
     return {
       name: state.placeholders.name,
@@ -84,7 +88,6 @@ const mapStateToProps = state => {
       verification: state.placeholders.verification,
     }
   };
-
 
 
 export default connect(
