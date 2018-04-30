@@ -13,6 +13,21 @@ class ContactForm extends React.Component {
             verification: '',
             visible: 'hide'
         };
+        this.baseState = this.state;
+    }
+    
+    handleEmailSending (){
+        this.postData('http://localhost:3001/sending_email', 
+        {
+            name: this.state.name,
+            email: this.state.email,
+            text: this.state.text
+        })
+        .then(data => 
+            console.log(data)
+        ) // JSON from `response.json()` call
+        .catch(error => console.error(error));
+        this.resetForm();
     }
 
     handleFormSubmit = (e) =>{
@@ -20,18 +35,17 @@ class ContactForm extends React.Component {
         if (this.state.verification !== '2'){
             this.setState({visible: ''});
         }else{
-            this.setState({visible: 'hide'});
-            console.log(this.state.name);
-            this.postData('http://localhost:3001/sending_email', 
-                {
-                    name: this.state.name,
-                    email: this.state.email,
-                    text: this.state.text
-                })
-                .then(data => console.log(data)) // JSON from `response.json()` call
-                .catch(error => console.error(error))
-            
+            this.setState({visible: 'hide'}); 
+            this.handleEmailSending(); 
         }
+    }
+
+    resetForm = () => {
+        this.setState(this.baseState);
+    }
+
+    thanksPage = () =>{
+        return ;
     }
  
     postData(url, data) {
@@ -70,26 +84,28 @@ class ContactForm extends React.Component {
     }
 
     render(){
+
         return(
         <div className="contact-form">
             <form onSubmit={this.handleFormSubmit}>
             <div className="form-row">
                 <div className="form-group col-md-6">
                     <input type="text" className="form-control" 
-                    placeholder = {this.props.name} required={true} onChange={this.handleNameChange} />
+                    placeholder = {this.props.name} required={true} onChange={this.handleNameChange} value={this.state.name}/>
                 </div>
                 <div className="form-group col-md-6 ">
                     <input type="email" className="form-control" 
-                    placeholder = {this.props.email} required={true} onChange={this.handleEmailChange}/>
+                    placeholder = {this.props.email} required={true} onChange={this.handleEmailChange} value={this.state.email}/>
                 </div>
             </div>
             <div className="form-group">
                 <textarea className="form-control" id="textArea3" rows="5" 
-                placeholder={this.props.text} onChange={this.handleTextChange} >
+                placeholder={this.props.text} onChange={this.handleTextChange}
+                value={this.state.text} >
                 </textarea>
             </div>
             <input type="text" className="form-control" id="textInput4" 
-            placeholder= {this.props.verification} required={true} onChange={this.handleVerificationChange} />
+            placeholder= {this.props.verification} required={true} onChange={this.handleVerificationChange} value={this.state.verification}/>
             <div className={"verification-error " + this.state.visible}> {this.state.verification} is not equal to the sum of 1 + 1, please enter a correct number`</div>
             {/* <input type="text" className="form-control" id="textInput4" 
             placeholder=" 1 + 1 = ?   Enter the result here"/> */}
@@ -99,6 +115,17 @@ class ContactForm extends React.Component {
     );
 }
 };
+
+const ThankPage = () => {
+    return(
+        <div className="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    );
+}
 
 
 const mapStateToProps = state => {

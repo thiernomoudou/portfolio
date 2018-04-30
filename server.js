@@ -23,8 +23,8 @@ app.get("/welcome", (req, res) => {
 app.post("/sending_email", (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.send({
-    hello: req.body.name || null,
-    me: req.body.email || null,
+    name: req.body.name || null,
+    email: req.body.email || null,
     text: req.body.text || null
 });
 });
