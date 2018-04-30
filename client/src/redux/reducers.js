@@ -1,12 +1,7 @@
 import * as types from './types';
 
 export const initialState = {
-    values:{
-        name: '',
-        email: '',
-        text: '',
-        verification: ''
-    },
+    values:{},
     placeholders:{
         name: 'Your Name',
         email: 'Your Email',
@@ -20,15 +15,9 @@ export const initialState = {
 export const rootReducer = (state = initialState, action) => {
     switch(action.type){
         case types.SUBMIT_FORM:
-            verifyInput(state.values)
-        case types.UPDATE_VALUE:
+            sendEmailToServer();
             return Object.assign({}, state, {
-                values:{
-                    name: action.value,
-                    email: action.value,
-                    text: action.value,
-                    verification: action.value
-                }
+                values: {}
             })
         default:
             return state;
@@ -36,17 +25,6 @@ export const rootReducer = (state = initialState, action) => {
 };
 
 
-function verifyInput(e){
-    // if (e==='2'){
-    //     alert('cool');
-    // }else{
-    //     alert(`${e} is not equal to 2 `)
-    // }
-
-    alert(
-        `name is ${e.name}
-        email is ${e.email}
-        text is ${e.text}
-        and ver is ${e.verification}`
-    );
+function sendEmailToServer(){
+    alert('Sending email to the server for processing...');
 }

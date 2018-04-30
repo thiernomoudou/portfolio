@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { formSubmit, formChange } from './../../redux/actionCreators';
 
+
 const ContactForm = (props) =>{
     return(
         <div className="contact-form">
@@ -32,7 +33,11 @@ const ContactForm = (props) =>{
     );
 };
 
-const handleChange = e => (alert(e.target.value));
+const handleChange = e => {
+    if (e.target.name === 'name'){
+        name: e.target.value
+    }
+};
 
 const mapStateToProps = state => {
     return {
@@ -44,9 +49,15 @@ const mapStateToProps = state => {
   };
 
 const mapDispatchToProps = dispatch => ({
-handleSumbitForm: () => dispatch(formSubmit()),
-// handleChange: (e) => dispatch(formChange(e))
-})
+handleSumbitForm: (e) => {
+    if (e.target.value === '2'){
+        dispatch(formSubmit())
+    }else{
+        alert (`${e.target.value} is not equal to 2`)
+    }
+    
+}
+});
 
 
 export default connect(
