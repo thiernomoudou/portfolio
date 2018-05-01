@@ -27,12 +27,10 @@ class ContactForm extends React.Component {
             email: this.state.email,
             text: this.state.text
         })
-        .then(data => 
-            console.log(data)
-        ) // JSON from `response.json()` call
+        .then(data => console.log(data)) // JSON from `response.json()` call
+        .then(this.resetForm())
+        .then(this.props.history.push('/thank-you'))
         .catch(error => console.error(error));
-        this.resetForm();
-        this.props.history.push('/thank-you');
     }
 
     handleFormSubmit = (e) =>{
