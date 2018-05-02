@@ -41,7 +41,6 @@ const Contact = () => {
             </p>
             <p>I'm open to discuss and ready to get involved.</p>
             <ContactForm />
-
         </div>
     );
 

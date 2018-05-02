@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import fetch from 'cross-fetch';
 
+import {
+	withRouter
+} from 'react-router-dom';
+
 
 class ContactForm extends React.Component {
     constructor(props){
@@ -23,11 +27,10 @@ class ContactForm extends React.Component {
             email: this.state.email,
             text: this.state.text
         })
-        .then(data => 
-            console.log(data)
-        ) // JSON from `response.json()` call
+        .then(data => console.log(data)) // JSON from `response.json()` call
+        .then(this.resetForm())
+        .then(this.props.history.push('/thank-you'))
         .catch(error => console.error(error));
-        this.resetForm();
     }
 
     handleFormSubmit = (e) =>{
@@ -42,10 +45,6 @@ class ContactForm extends React.Component {
 
     resetForm = () => {
         this.setState(this.baseState);
-    }
-
-    thanksPage = () =>{
-        return ;
     }
  
     postData(url, data) {
@@ -116,18 +115,6 @@ class ContactForm extends React.Component {
 }
 };
 
-const ThankPage = () => {
-    return(
-        <div className="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    );
-}
-
-
 const mapStateToProps = state => {
     return {
       name: state.placeholders.name,
@@ -140,4 +127,4 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps
-  )(ContactForm);
+  )(withRouter(ContactForm));
