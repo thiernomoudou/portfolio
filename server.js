@@ -24,7 +24,6 @@ if (process.env.NODE_ENV === "production") {
 app.get("/welcome", (req, res) => {
     res.send("Welcome to my site");
   });
-ls
 app.post("/sending_email", (req, res) => {
 
   let key = process.env.SENDGRID_API_KEY;
