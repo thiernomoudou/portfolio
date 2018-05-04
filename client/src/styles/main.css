@@ -20,6 +20,7 @@ body{
     font-family: 'Comfortaa', cursive;
 }
 
+
 /* ************************************* */
 /* NAVBAR  */
 /* **************************************  */
@@ -265,6 +266,11 @@ to { transform: rotate(360deg); }
     color: red;
     padding: 0.2% 1% 1% 1%;
 
+}
+
+/*  fix firefox automatically showing a red border on required fields bug */
+input:required, textarea:required {
+    box-shadow: none;
 }
 
 /* ************************************* */

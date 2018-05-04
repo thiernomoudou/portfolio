@@ -90,21 +90,21 @@ class ContactForm extends React.Component {
             <div className="form-row">
                 <div className="form-group col-md-6">
                     <input type="text" className="form-control" 
-                    placeholder = {this.props.name} required={true} onChange={this.handleNameChange} value={this.state.name}/>
+                    placeholder = {this.props.name} required onChange={this.handleNameChange} value={this.state.name}/>
                 </div>
                 <div className="form-group col-md-6 ">
                     <input type="email" className="form-control" 
-                    placeholder = {this.props.email} required={true} onChange={this.handleEmailChange} value={this.state.email}/>
+                    placeholder = {this.props.email} required onChange={this.handleEmailChange} value={this.state.email}/>
                 </div>
             </div>
             <div className="form-group">
                 <textarea className="form-control" id="textArea3" rows="5" 
                 placeholder={this.props.text} onChange={this.handleTextChange}
-                value={this.state.text} >
+                value={this.state.text} required >
                 </textarea>
             </div>
             <input type="text" className="form-control" id="textInput4" 
-            placeholder= {this.props.verification} required={true} onChange={this.handleVerificationChange} value={this.state.verification}/>
+            placeholder= {this.props.verification} required onChange={this.handleVerificationChange} value={this.state.verification}/>
             <div className={"verification-error " + this.state.visible}> {this.state.verification} is not equal to the sum of 1 + 1, please enter a correct number`</div>
             {/* <input type="text" className="form-control" id="textInput4" 
             placeholder=" 1 + 1 = ?   Enter the result here"/> */}
