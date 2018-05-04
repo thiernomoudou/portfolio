@@ -43,7 +43,8 @@ class ContactForm extends React.Component {
     handleFormSubmit = (e) =>{
         e.preventDefault();
         if (this.state.verification !== '2'){
-            this.setState({visible: ''});
+            // Making verification error visible
+            this.setState({visible: ''}); 
         }else{
             this.setState({visible: 'hide'}); 
             this.handleEmailSending(); 
@@ -65,12 +66,14 @@ class ContactForm extends React.Component {
         .then(response => response.json()) // parses response to JSON
     }
 
+    // handling change in the name input field
     handleNameChange = (e) =>{
         this.setState({
             name: e.target.value
         });
     }
 
+    // handling change in the email input field
     handleEmailChange = (e) =>{
         this.setState({
             email: e.target.value
@@ -112,7 +115,7 @@ class ContactForm extends React.Component {
             </div>
             <input type="text" className="form-control" id="textInput4" 
             placeholder= {this.props.verification} required onChange={this.handleVerificationChange} value={this.state.verification}/>
-            <div className={"verification-error " + this.state.visible}> {this.state.verification} is not equal to the sum of 1 + 1, please enter a correct number`</div>
+            <div className={"verification-error " + this.state.visible}> {this.state.verification} is not equal to the sum of 1 + 1, please enter a correct number which is 2</div>
             {/* <input type="text" className="form-control" id="textInput4" 
             placeholder=" 1 + 1 = ?   Enter the result here"/> */}
             <button type="submit" className="btn btn-lg contact-btn">Send</button>
