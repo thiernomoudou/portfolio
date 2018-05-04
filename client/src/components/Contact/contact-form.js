@@ -27,9 +27,16 @@ class ContactForm extends React.Component {
             email: this.state.email,
             text: this.state.text
         })
-        .then(data => console.log(data)) // JSON from `response.json()` call
-        .then(this.resetForm())
-        .then(this.props.history.push('/thank-you'))
+        .then(data => {
+            console.log(data);
+            let statusCode = data[0].statusCode;
+            if (statusCode === 202 || statusCode === 200){
+                this.resetForm();
+                this.props.history.push('/thank-you');
+            }else{
+                console.log("error treating response data");
+            }
+        })
         .catch(error => console.error(error));
     }
 

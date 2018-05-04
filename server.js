@@ -56,6 +56,7 @@ app.post("/sending_email", (req, res) => {
     }else{
         console.log('Message sent: ' + info);
         res.json(info);
+        res.status(202)
     };
   });
   
