@@ -7,6 +7,7 @@ import {
 
 import HomePage from './../Home/index';
 import ContactPage from './../ContactPage/index';
+import ProjectPage from './../ProjectPage/index';
 import ThankPage from './../../components/Contact/Thanks';
 
 
@@ -17,6 +18,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/contact' component={ContactPage} />
+          <Route path='/projects' component={ProjectPage} />
           <Route path='/thank-you' component={ThankPage} />
         </Switch>
       </Router>
