@@ -28,7 +28,7 @@ function Navbar(props){
                 <div className="navbar-nav" id='navbar-right' >
                     <Link className="nav-item nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
                     <Link className="nav-item nav-link" to="/projects">Projects</Link>
-                    <Link className="nav-item nav-link"  to="/">Blog</Link>
+                    <Link className="nav-item nav-link"  to="/blog">Blog</Link>
                     <Link className="nav-item nav-link" to="/contact">Contact</Link>
                 </div>
             </div>
