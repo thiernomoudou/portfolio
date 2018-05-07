@@ -168,7 +168,8 @@ to { transform: rotate(360deg); }
 
 /* call-to-action button and form submit button styles */
 #boot-override .email-button, 
-#boot-override .contact-btn{
+#boot-override .contact-btn,
+#boot-override .project-btn{
     background-color: #B30FB7;
     color: white;
     width: 20rem;
@@ -177,7 +178,8 @@ to { transform: rotate(360deg); }
 
 /* call-to-action button and form submit button styles */
 #boot-override .email-button:hover,
-#boot-override .contact-btn:hover{
+#boot-override .contact-btn:hover,
+#boot-override .project-btn:hover{
     background-color: #9DC040 ;
     color: white;
 }
@@ -296,4 +298,38 @@ input:required, textarea:required {
 
 /* ************************************* */
 /* THANK YOU PAGE */
+/* **************************************  */
+
+/* ************************************* */
+/* SINGLE PROJECT PAGE */
+/* **************************************  */
+
+.project-description{
+    padding: 4% 0;
+}
+
+.project-description img{
+    height: 25rem;
+    margin: 0  auto 3% auto;
+    display: block;
+}
+
+.project-description h2{
+    color: #B30FB7;
+}
+
+.project-description .brief-description{
+    margin-top: -0.2%;
+    font-weight: 700;
+}
+
+.project-description .description{
+    margin-left: 16%;
+    margin-right: 15%;
+    line-height: 1.8;
+    font-size: 110%;
+}
+
+/* ************************************* */
+/* SINGLE PROJECT PAGE */
 /* **************************************  */

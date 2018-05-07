@@ -32,7 +32,7 @@ const ProjectBanner = (props) => {
             </div>
         </div>
             <p>
-                Hey voilà some projects I worked on. 
+                Hey voilà some of my recent projects. 
             </p>
             <p>Don't Hesite to reach out if you would like to know more.</p>
         </div>
