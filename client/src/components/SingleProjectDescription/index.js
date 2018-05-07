@@ -13,7 +13,7 @@ const SingleProjectDescription = (props) => {
             <p className="brief-description"> {props.briefDescription} </p>
             <p className="description">{props.description} </p>
             {/* this button shows only if  the value of the show props in not null or undefined */}
-            {showButton.length !== 0 &&
+            {showButton === true  &&
                  <a className="btn btn-lg project-btn" target="_blank" rel="noopener noreferrer"
                  href="https://univ-erp.herokuapp.com/">
                  View on {props.hostname}

@@ -11,6 +11,7 @@ import descImage1 from './../../images/univ-stud.png'
 import Navbar from './../../components/Navbar/index';
 import ProjectBanner from './../../components/Project/index';
 import SingleProject from './../../components/SingleProjectDescription/index';
+import CallToAction from './../../components/CallToAction/index';
 import Footer from './../../components/Footer/index';
 
 let project = {
@@ -23,8 +24,15 @@ let project = {
                 countries, but small for French Speaking one. I'm \
                 building with a team of 4 people, a simple, secure and high\
                 performant school management system adapted to African countries"
+    },
+    second:{
+        img: mountain,
+        alt: "money transfer system",
+        proTitle: "Money Transfer System",
+        proBDesc: "Design and development and deployment",
+        proDesc: "A simple and responsive Web based money transfer system for \
+                handling money transfer submission, monitoring and reporting"
     }
-
 };
 
 
@@ -47,6 +55,13 @@ export default class ProjectPage extends Component{
                     description={project.first.proDesc} showButton={true} 
                     hostname='Heroku' bgColor='#eee'
                 />
+                <SingleProject img={project.second.img} alt={project.second.alt} 
+                    projectTitle={project.second.proTitle} 
+                    briefDescription={project.second.proBDesc}
+                    description={project.second.proDesc} showButton={false} 
+                    hostname='Heroku' bgColor='#e3e3e3'
+                />
+                <CallToAction />
                 <Footer />
             </div>
         );

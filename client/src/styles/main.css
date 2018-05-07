@@ -154,6 +154,9 @@ to { transform: rotate(360deg); }
 /* ************************************* */
 /* CALL TO ACTION */
 /* **************************************  */
+.call-to-action{
+    margin-top: 2%;
+}
 
 .call-to-action .call-to-action-text{
     color: #B30FB7;
