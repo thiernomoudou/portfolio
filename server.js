@@ -4,9 +4,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const sgMail = require('@sendgrid/mail');
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').load();
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   require('dotenv').load();
+// }
+
+require('dotenv').load();
 
 app.set("port", process.env.PORT || 3001);
 

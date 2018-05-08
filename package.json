@@ -13,7 +13,8 @@
     "iconv-lite": "^0.4.21"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "startDev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run server",
     "server": "node server.js",
     "client": "node start-client.js",
     "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
@@ -26,5 +27,8 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0"
+  },
+  "engines": {
+    "node": "8.11.0"
   }
 }
