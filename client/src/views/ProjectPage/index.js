@@ -6,7 +6,8 @@ import {Helmet} from 'react-helmet';
 
 import mainImage from './../../images/project-title.svg';
 import mountain from './../../images/mountain-v2.svg';
-import descImage1 from './../../images/univ-stud.png'
+import descImage1 from './../../images/univ-stud.png';
+import descImage2 from './../../images/m-summary.png';
 
 import Navbar from './../../components/Navbar/index';
 import ProjectBanner from './../../components/Project/index';
@@ -26,10 +27,10 @@ let project = {
                 performant school management system adapted to African countries"
     },
     second:{
-        img: mountain,
+        img: descImage2,
         alt: "money transfer system",
         proTitle: "Money Transfer System",
-        proBDesc: "Design and development and deployment",
+        proBDesc: "Design, development and deployment",
         proDesc: "A simple and responsive Web based money transfer system for \
                 handling money transfer submission, monitoring and reporting"
     }
