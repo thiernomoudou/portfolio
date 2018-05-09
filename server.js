@@ -5,11 +5,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const sgMail = require('@sendgrid/mail');
 
-// if (process.env.NODE_ENV !== 'production') {
-//   require('dotenv').load();
-// }
-
-require('dotenv').load();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
 
 app.set("port", process.env.PORT || 3001);
 
@@ -24,15 +22,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("./client/build")); 
 }
 
-// serving static files when deployed
-// app.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
-
 app.get("/welcome", (req, res) => {
   res.send("Welcome to my site");
 });
-
 
 app.post("/sending_email", (req, res) => {
 
