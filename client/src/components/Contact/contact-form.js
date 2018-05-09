@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 
 
+    
+
 class ContactForm extends React.Component {
     constructor(props){
         super(props);
@@ -21,12 +23,10 @@ class ContactForm extends React.Component {
     }
     
     handleEmailSending (){
+        let url = 'http://localhost:3001/sending_email';
         if (process.env.NODE_ENV === 'production'){
-            let url = 'https://thiernomoudou.herokuapp.com/sending_email';
-        }else{
-            let url = 'http://localhost:3001/sending_email';
+            url = 'https://thiernomoudou.herokuapp.com/sending_email';
         }
-        
         this.postData(url, 
         {
             name: this.state.name,
