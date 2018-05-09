@@ -23,9 +23,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("./client/build")); 
 }
 
-app.get("/welcome", (req, res) => {
+if (process.env.NODE_ENV === 'production'){
+  app.get("/welcome", (req, res) => {
     res.send("Welcome to my site");
   });
+}
+
 app.post("/sending_email", (req, res) => {
 
   let key = process.env.SENDGRID_API_KEY;
