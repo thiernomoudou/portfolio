@@ -23,7 +23,7 @@ class App extends Component {
           <Route path='/projects' component={ProjectPage} />
           <Route path='/blog' component={Blog} />
           <Route path='/thank-you' component={ThankPage} />
-          <Route component={NotFound} />
+          {/* <Route component={NotFound} /> */}
         </Switch>
       </Router>
     );
