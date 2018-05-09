@@ -23,11 +23,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("./client/build")); 
 }
 
-if (process.env.NODE_ENV === 'production'){
-  app.get("/welcome", (req, res) => {
-    res.send("Welcome to my site");
-  });
-}
+
+app.get("/welcome", (req, res) => {
+  res.send("Welcome to my site");
+});
+
 
 app.post("/sending_email", (req, res) => {
 
