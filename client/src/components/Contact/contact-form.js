@@ -23,9 +23,12 @@ class ContactForm extends React.Component {
     }
     
     handleEmailSending (){
-        let url = 'http://localhost:3001/sending_email';
-        if (process.env.NODE_ENV === 'production'){
+        let deployed = false;
+        let url;
+        if (deployed){
             url = 'https://thiernomoudou.herokuapp.com/sending_email';
+        }else{
+            url =  'http://localhost:3001/sending_email';
         }
         this.postData(url, 
         {
