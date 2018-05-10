@@ -6,7 +6,7 @@ import {
 	withRouter
 } from 'react-router-dom';
 
-
+import Modal from './../Modal/index';
     
 
 class ContactForm extends React.Component {
@@ -17,7 +17,8 @@ class ContactForm extends React.Component {
             email: '',
             text: '',
             verification: '',
-            visible: 'hide'
+            visible: 'hide',
+            showModal: false
         };
         this.baseState = this.state;
     }
@@ -40,10 +41,11 @@ class ContactForm extends React.Component {
             console.log(data);
             let statusCode = data[0].statusCode;
             if (statusCode === 202 || statusCode === 200){
+                this.setState({showModal: false});
                 this.resetForm();
                 this.props.history.push('/thank-you');
             }else{
-                console.log("error treating response data");
+                alert("Unable to send your email");
             }
         })
         .catch(error => console.error(error));
@@ -55,7 +57,8 @@ class ContactForm extends React.Component {
             // Making verification error visible
             this.setState({visible: ''}); 
         }else{
-            this.setState({visible: 'hide'}); 
+            this.setState({visible: 'hide'});
+            this.setState({showModal: true}); 
             this.handleEmailSending(); 
         }
     }
@@ -129,6 +132,7 @@ class ContactForm extends React.Component {
             placeholder=" 1 + 1 = ?   Enter the result here"/> */}
             <button type="submit" className="btn btn-lg contact-btn">Send</button>
             </form>
+            <Modal show={this.state.showModal} />
         </div>
     );
 }
