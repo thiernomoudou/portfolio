@@ -23,7 +23,7 @@ class ContactForm extends React.Component {
     }
     
     handleEmailSending (){
-        let deployed = false;
+        let deployed = true;
         let url;
         if (deployed){
             url = 'https://thiernomoudou.herokuapp.com/sending_email';

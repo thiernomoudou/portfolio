@@ -18,7 +18,7 @@ class ThankPage extends React.Component {
             <Navbar />
             <div className="alert alert-success alert-dismissible fade show thanks text-center" role="alert">
                 <p><strong>Thanks for your interest</strong></p>
-                 <p> Looking forward to colloborating with you!</p>
+                 <p> Looking forward to collaborating with you!</p>
                 <button type="button" className="close" onClick={this.redirectHomepage} data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
