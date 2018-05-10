@@ -312,9 +312,11 @@ input:required, textarea:required {
 }
 
 .project-description img{
-    height: 25rem;
+    height: auto;
     margin: 0  auto 3% auto;
     display: block;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .project-description h2{
