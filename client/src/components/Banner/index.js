@@ -28,7 +28,7 @@ const Banner = () => {
                     <img src={mountain} style={styles.leftMount} alt="Banner showing some of my skills"/>
                 </div>
                 <div className='col-md-6 '>
-                    <img src={banner} style={styles.main} alt="Banner showing some of my skills"/>
+                    <img src={banner} className="banner-img"alt="Banner showing some of my skills"/>
                 </div>
                 <div className='col-md-3 d-none d-sm-none d-md-block'>
                     <img src={mountain} style={styles.rightMount} alt="Banner showing some of my skills"/>

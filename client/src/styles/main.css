@@ -69,6 +69,7 @@ to { transform: rotate(360deg); }
     margin-right: auto;
     margin-top: -10%;
     width: 100%;
+    height:20em;
 }
 
 .welcome-message h5{
@@ -90,6 +91,12 @@ to { transform: rotate(360deg); }
     background-color: #eee;
     margin-top: 0;
 }
+
+.banner-img{
+    height: 30em;
+    width: 100%;
+}
+
 #boot-override .banner{
     height: 31rem;
     margin-bottom: 4%;
@@ -238,7 +245,9 @@ to { transform: rotate(360deg); }
     text-align: center;
     font-size: 120%;
 }
-
+.contact-title .contact-title-img{
+    height: 12em;
+}
 .contact-title p:nth-of-type(2){
     margin-top: -1%;
 }
@@ -360,15 +369,32 @@ input:required, textarea:required {
     #boot-override .email-button, 
     #boot-override .contact-btn,
     #boot-override .project-btn{
-        background-color: #B30FB7;
-        color: white;
-        width: 50%;
-        margin-top: 2%;
+        width: 70%;
         margin-right: 2%;
-    
-
     }
     #boot-override .contact-btn{
         width: 100%;
+    }
+    
+    /* welcome-message */
+    .welcome-message img{
+        height:10em;
+    }
+    /* Banner img */
+    .banner-img{
+        height: 20em;
+        width: 100%;
+    }
+
+    #boot-override .banner{
+        height: 21rem;
+        margin-bottom: 4%;
+    }
+    /* contact img */
+    .contact-title .contact-title-img{
+        height: 8em;
+    }
+    #contact-banner{
+        height: 8em;
     }
 }
