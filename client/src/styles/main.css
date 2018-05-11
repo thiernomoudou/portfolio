@@ -175,7 +175,7 @@ to { transform: rotate(360deg); }
 #boot-override .project-btn{
     background-color: #B30FB7;
     color: white;
-    width: 20rem;
+    width: 30%;
     margin-top: 2%;
 }
 
@@ -353,3 +353,22 @@ input:required, textarea:required {
 /* ************************************* */
 /* MODAL */
 /* **************************************  */
+
+
+/* MOBILE OPTIMISATION */
+@media (max-width: 600px) {
+    #boot-override .email-button, 
+    #boot-override .contact-btn,
+    #boot-override .project-btn{
+        background-color: #B30FB7;
+        color: white;
+        width: 50%;
+        margin-top: 2%;
+        margin-right: 2%;
+    
+
+    }
+    #boot-override .contact-btn{
+        width: 100%;
+    }
+}
