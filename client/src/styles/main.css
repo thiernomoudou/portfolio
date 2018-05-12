@@ -399,4 +399,9 @@ input:required, textarea:required {
     #contact-banner{
         height: 8em;
     }
+    .thanks {
+        height: 20rem;
+        width: 90%;
+        margin: 3% auto -3% 5%;
+    }
 }
