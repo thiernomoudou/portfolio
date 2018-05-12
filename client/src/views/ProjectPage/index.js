@@ -21,18 +21,18 @@ let project = {
         alt: "school erp",
         proTitle: "school management system",
         proBDesc: "Design and development",
-        proDesc: "The offer for school management systems is large for English\
-                countries, but small for French Speaking one. I'm \
-                building with a team of 4 people, a simple, secure and high\
-                performant school management system adapted to African countries"
+        proDesc: `The offer for school management systems is large for English
+                countries, but small for French Speaking one. I'm 
+                building with a team of 4 people, a simple, secure and high
+                performant school management system adapted to African countries`
     },
     second:{
         img: descImage2,
         alt: "money transfer system",
         proTitle: "Money Transfer System",
         proBDesc: "Design, development and deployment",
-        proDesc: "A simple and responsive Web based money transfer system for \
-                handling money transfer submission, monitoring and reporting"
+        proDesc: `A simple and responsive Web based money transfer system for 
+                handling money transfer submission, monitoring and reporting`
     }
 };
 
