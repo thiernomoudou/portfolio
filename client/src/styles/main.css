@@ -16,8 +16,10 @@
 /* **************************************  */
 
 
-body{
+html, body{
     font-family: 'Comfortaa', cursive;
+    overflow-x: hidden;
+    margin-right: 0;
 }
 
 
