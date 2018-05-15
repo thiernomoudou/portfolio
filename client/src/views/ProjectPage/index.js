@@ -22,7 +22,7 @@ let project = {
         proTitle: "school management system",
         proBDesc: "Design and development",
         proDesc: `The offer for school management systems is large for English
-                countries, but small for French Speaking one. I'm 
+                speaking countries, but small for French Speaking one. I'm 
                 building with a team of 4 people, a simple, secure and high
                 performant school management system adapted to African countries`
     },
