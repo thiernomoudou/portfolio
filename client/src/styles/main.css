@@ -17,8 +17,7 @@
 
 
 html, body{
-    font-family: 'Comfortaa', cursive;
-    overflow-x: hidden;
+    font-family: 'Comfortaa', helvetica, sans-serif;
     margin-right: 0;
 }
 
@@ -403,5 +402,12 @@ input:required, textarea:required {
         height: 20rem;
         width: 90%;
         margin: 3% auto -3% 5%;
+    }
+
+    /* BODY */
+    html, body{
+        font-family: 'Comfortaa', helvetica, sans-serif;
+        overflow-x: hidden;
+        margin:0;
     }
 }
