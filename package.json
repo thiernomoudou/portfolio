@@ -13,7 +13,7 @@
     "iconv-lite": "^0.4.21"
   },
   "scripts": {
-    "startDev": "concurrently \"npm run server\" \"npm run client\"",
+    "start-dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "npm run server",
     "server": "node server.js",
     "client": "node start-client.js",

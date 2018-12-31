@@ -29,7 +29,7 @@ class Navbar extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions);
   }
-  
+
   /**
   * Calculate & Update state of new dimensions
   */
@@ -69,7 +69,10 @@ class Navbar extends React.Component {
         >
           <span className='navbar-toggler-icon'></span>
         </button>
-        <div className='collapse navbar-collapse justify-content-end' id='navbarNavAltMarkup'>
+        <div
+          className='collapse navbar-collapse justify-content-end'
+          id='navbarNavAltMarkup'
+        >
           <div className='navbar-nav' id='navbar-right'>
             <Link className='nav-item nav-link' to='/'>
               Home

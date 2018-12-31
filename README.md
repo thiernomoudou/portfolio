@@ -16,5 +16,5 @@ cd client
 npm i
 
 cd ..
-npm start
+npm start-dev
 ```
