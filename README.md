@@ -3,7 +3,7 @@
 <!-- [![TravisCI](https://travis-ci.org/fullstackreact/food-lookup-demo.svg?branch=master)](https://travis-ci.org/fullstackreact/food-lookup-demo)
 [![Dolphins](https://cdn.rawgit.com/fullstackreact/food-lookup-demo/master/dolphins-badge.svg)](https://www.fullstackreact.com) -->
 
-This is my personal website built with `create-react-app` alongside a Node Express server.
+This is a portfolio site built with `create-react-app` alongside a Node Express server.
 
 ## Running locally
 
