@@ -9,7 +9,7 @@
     "cors": "^2.8.4",
     "cross-fetch": "^2.1.1",
     "dotenv": "^5.0.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "iconv-lite": "^0.4.21"
   },
   "scripts": {
